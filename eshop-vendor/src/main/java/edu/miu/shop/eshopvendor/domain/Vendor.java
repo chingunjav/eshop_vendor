@@ -23,8 +23,8 @@ public class Vendor extends Person {
 	private String custServContactNo;
 	private String status;  //new, active, inactive
 
-	List<Product> products;
-	List<Promotion> promotions;
+	//List<Product> products;
+	//List<Promotion> promotions;
 
 	Vendor(String vendorname, String contactPhone, String email, String password){
 		super(email,password,contactPhone,password);

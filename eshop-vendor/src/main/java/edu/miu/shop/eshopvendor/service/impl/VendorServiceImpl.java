@@ -41,11 +41,12 @@ public class VendorServiceImpl implements VendorService {
 		 return vendorDao.findAll();
 	}
 	
-	@Override
-	public List<Product> listProductbyVendor(String id){
-		Vendor obj = vendorDao.findById(id).orElseThrow();
-		return obj.getProducts();
-	}
+//	@Override
+//	public List<Product> listProductbyVendor(String id){
+//		Vendor obj = vendorDao.findById(id).orElseThrow();
+//		return obj.getProducts();
+//	}
+	
 	@Override
 	public void updateVendor(Vendor vendor) {
 		vendorDao.save(vendor);

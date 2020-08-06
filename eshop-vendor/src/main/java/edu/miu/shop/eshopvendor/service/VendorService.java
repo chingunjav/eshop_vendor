@@ -17,7 +17,7 @@ public interface VendorService {
 	
 	public List<Vendor> listVendor();
 	
-	public List<Product> listProductbyVendor(String id);
+	//public List<Product> listProductbyVendor(String id);
 	public String addProduct(String id, Product vProduct);
 	
 	public void updateVendor(Vendor vendor);	

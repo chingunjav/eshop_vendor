@@ -1,5 +1,6 @@
 package edu.miu.shop.eshopvendor.domain;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -12,6 +13,8 @@ import lombok.Setter;
 @Document(collection ="product")
 public class Product {
 
+	@Id
+	
 	String productID;
 	String productName;
 	Double price;

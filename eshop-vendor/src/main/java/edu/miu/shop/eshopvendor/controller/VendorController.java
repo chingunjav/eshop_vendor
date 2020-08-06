@@ -50,10 +50,10 @@ public class VendorController {
 			return vendorService.addProduct(id, vProduct);
 	}
 	
-	@GetMapping("/{id}/products")
-	public List<Product> listProduct(@PathVariable String id){
-		return vendorService.listProductbyVendor(id);
-	}
+//	@GetMapping("/{id}/products")
+//	public List<Product> listProduct(@PathVariable String id){
+//		return vendorService.listProductbyVendor(id);
+//	}
 	
 	@PostMapping("/{id}/{productId}/addpromotion")
 	public String addPromotion(@PathVariable String id, @PathVariable String productId,@RequestBody Promotion promotion) {
