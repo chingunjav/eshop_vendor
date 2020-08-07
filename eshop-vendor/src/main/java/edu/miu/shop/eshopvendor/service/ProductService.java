@@ -10,4 +10,5 @@ public interface ProductService {
 
 	List<Product> listByVendorID(String vendorID);
 
+	List<Product> listByProductName(String pName);
 }

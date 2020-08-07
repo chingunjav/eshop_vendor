@@ -22,6 +22,7 @@ public class ProductServiceImpl implements ProductService  {
 	@Override
 	public String inserProduct(Product product, String vendorId) {
 		product.setProductID(GeneralMethod.generateOrderNumber(15));
+		product.setVendorid(vendorId);
 		productDao.insert(product);
 		return product.getProductID();
 	}
@@ -30,10 +31,17 @@ public class ProductServiceImpl implements ProductService  {
 	public List<Product> listByVendorID(String vendorID) {
 		List<Product> result = productDao.findAll();
 		result.stream()
-				.filter(p ->p.getVendorid()=="vendorID")
+				.filter(p ->p.getVendorid()==vendorID)
 				.map(Product::getVendorid)
 				.collect(Collectors.toList());
 		return result;
 	}
 	
+	@Override
+	public List<Product> listByProductName(String pName){
+		List<Product> result = productDao.findAll();
+		
+		return result;
+		
+	}
 }
