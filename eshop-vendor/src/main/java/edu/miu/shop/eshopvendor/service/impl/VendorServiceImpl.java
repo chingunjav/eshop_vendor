@@ -30,6 +30,7 @@ public class VendorServiceImpl implements VendorService {
 	@Override
 	public String insertVendor(Vendor vendor)	{
 		vendor.setVendorcode(GeneralMethod.generateOrderNumber(6));
+		vendor.setStatus("new");
 		vendorDao.insert(vendor);
 		return vendor.getVendorcode();
 		
